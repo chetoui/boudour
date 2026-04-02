@@ -194,6 +194,50 @@ html[lang="ar"] .footer-links a{font-family:'Noto Naskh Arabic',serif;letter-spa
 .reveal{opacity:0;transform:translateY(26px);transition:all .75s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 @media(max-width:768px){.nav-center{display:none}.about-grid,.ins-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}.method-grid{grid-template-columns:1fr}}
+
+/* PRICING */
+.pricing-section{background:var(--green-dark)}
+.pricing-controls{display:flex;gap:16px;justify-content:center;margin:36px 0 40px;flex-wrap:wrap}
+.toggle-group{display:flex;background:rgba(255,255,255,0.06);border:1px solid rgba(184,151,42,0.2);border-radius:3px;overflow:hidden}
+.toggle-btn{padding:9px 20px;font-size:13px;cursor:pointer;border:none;background:transparent;color:rgba(255,255,255,0.5);transition:all .25s;letter-spacing:1px;white-space:nowrap}
+html[lang="ar"] .toggle-btn{font-family:'Noto Naskh Arabic',serif;letter-spacing:0;font-size:14px}
+.toggle-btn.active{background:var(--gold);color:#fff;font-weight:600}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2px;background:rgba(184,151,42,0.1);max-width:1100px;margin:0 auto}
+.price-card{background:var(--green-dark);padding:32px 24px;position:relative;transition:background .3s;border-top:2px solid transparent}
+.price-card:hover{background:rgba(255,255,255,0.03)}
+.price-card.featured{border-top-color:var(--gold)}
+.featured-badge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-size:10px;letter-spacing:2px;padding:4px 14px;text-transform:uppercase;white-space:nowrap;border-radius:0 0 4px 4px}
+html[lang="ar"] .featured-badge{font-family:'Noto Naskh Arabic',serif;letter-spacing:0;font-size:12px}
+.price-icon{font-family:'Noto Naskh Arabic',serif;font-size:32px;color:var(--gold);opacity:0.4;margin-bottom:14px;display:block}
+.price-name{font-size:20px;color:#fff;font-weight:400;margin-bottom:4px}
+html[lang="ar"] .price-name{font-family:'Noto Naskh Arabic',serif;font-size:22px}
+.price-name-ar{font-family:'Noto Naskh Arabic',serif;font-size:13px;color:var(--gold-light);margin-bottom:16px;display:block;opacity:0.7}
+.price-meta{display:flex;flex-direction:column;gap:6px;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid rgba(184,151,42,0.12)}
+.price-meta-item{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.45)}
+html[lang="ar"] .price-meta-item{font-family:'Noto Naskh Arabic',serif;font-size:14px;flex-direction:row-reverse}
+.price-meta-dot{width:4px;height:4px;background:var(--gold);border-radius:50%;flex-shrink:0;opacity:0.5}
+.price-amount{margin-bottom:6px}
+.price-main{font-family:'Cormorant Garamond',serif;font-size:46px;color:var(--gold);line-height:1;font-weight:300}
+.price-currency{font-size:18px;color:var(--gold);vertical-align:top;margin-top:8px;display:inline-block}
+.price-period{font-size:12px;color:rgba(255,255,255,0.35);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px}
+html[lang="ar"] .price-period{font-family:'Noto Naskh Arabic',serif;letter-spacing:0;font-size:13px}
+.price-saving{display:inline-block;background:rgba(184,151,42,0.12);color:var(--gold);font-size:11px;padding:3px 10px;border-radius:2px;margin-top:6px;letter-spacing:1px}
+html[lang="ar"] .price-saving{font-family:'Noto Naskh Arabic',serif;letter-spacing:0;font-size:13px}
+.price-type-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;padding:4px 10px;border-radius:2px;margin-bottom:14px;letter-spacing:.5px}
+html[lang="ar"] .price-type-badge{font-family:'Noto Naskh Arabic',serif;font-size:13px}
+.badge-ind{background:rgba(26,92,50,0.4);color:#6fcf97;border:1px solid rgba(111,207,151,0.2)}
+.badge-grp{background:rgba(184,151,42,0.15);color:var(--gold-light);border:1px solid rgba(184,151,42,0.2)}
+.price-note{font-size:12px;color:rgba(255,255,255,0.35);line-height:1.6;margin-top:12px}
+html[lang="ar"] .price-note{font-family:'Noto Naskh Arabic',serif;font-size:13px;text-align:right}
+.pricing-disclaimer{max-width:700px;margin:28px auto 0;text-align:center;padding:18px 24px;background:rgba(184,151,42,0.06);border:1px solid rgba(184,151,42,0.15);border-radius:2px}
+.pricing-disclaimer p{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.7}
+html[lang="ar"] .pricing-disclaimer p{font-family:'Noto Naskh Arabic',serif;font-size:15px}
+.pricing-disclaimer strong{color:var(--gold)}
+/* Non-arabic speaker note */
+.speaker-note{font-size:11px;color:rgba(255,255,255,0.3);margin-top:4px}
+html[lang="ar"] .speaker-note{font-family:'Noto Naskh Arabic',serif;font-size:13px}
+.price-alt{font-size:13px;color:rgba(255,255,255,0.3);margin-top:2px}
+.price-alt span{{font-family:'Cormorant Garamond',serif}}
 </style>
 </head>
 <body class="lang-fr">
@@ -211,7 +255,9 @@ html[lang="ar"] .footer-links a{font-family:'Noto Naskh Arabic',serif;letter-spa
     <li><a href="#about"><span data-fr>À propos</span><span data-ar>من نحن</span></a></li>
     <li><a href="#programs"><span data-fr>Programmes</span><span data-ar>البرامج</span></a></li>
     <li><a href="#method"><span data-fr>Méthode</span><span data-ar>المنهجية</span></a></li>
-    <li><a href="#testimonials"><span data-fr>Témoignages</span><span data-ar>الشهادات</span></a></li>
+    <li><a href="#pricing"><span data-fr>Tarifs</span><span data-ar>الأسعار</span></a></li>
+    <li><a href="#pricing"><span data-fr>Tarifs</span><span data-ar>الأسعار</span></a>
+      <a href="#testimonials"><span data-fr>Témoignages</span><span data-ar>الشهادات</span></a></li>
     <li><a href="#inscription"><span data-fr>Contact</span><span data-ar>التسجيل</span></a></li>
   </ul>
   <div class="nav-right">
@@ -378,6 +424,147 @@ html[lang="ar"] .footer-links a{font-family:'Noto Naskh Arabic',serif;letter-spa
   </div>
 </section>
 
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+  <span class="section-label" style="color:rgba(184,151,42,0.45)">
+    <span data-fr-inline class="latin">Tarifs &amp; Abonnements</span>
+    <span data-ar-inline>الباقات والأسعار</span>
+  </span>
+  <h2 class="section-title" style="color:#fff">
+    <span data-fr>Des tarifs <em style="color:var(--gold)">accessibles et transparents</em></span>
+    <span data-ar>أسعار <em style="color:var(--gold)">شفافة وميسورة</em></span>
+  </h2>
+  <p class="section-sub" style="color:rgba(255,255,255,0.45)">
+    <span data-fr>Taux de change : 1 EUR = 10,80 MAD · Réduction accordée dès 2 abonnements cumulés</span>
+    <span data-ar>سعر الصرف: 1 يورو = 10.80 درهم · تخفيض عند الاشتراك في باقتين أو أكثر</span>
+  </p>
+
+  <div class="pricing-controls">
+    <!-- Currency toggle -->
+    <div class="toggle-group">
+      <button class="toggle-btn active" id="btn-mad" onclick="setCurrency('MAD')">MAD (درهم)</button>
+      <button class="toggle-btn" id="btn-eur" onclick="setCurrency('EUR')">EUR (€)</button>
+    </div>
+    <!-- Period toggle -->
+    <div class="toggle-group">
+      <button class="toggle-btn active" id="btn-monthly" onclick="setPeriod('monthly')">
+        <span data-fr>Mensuel</span><span data-ar>شهري</span>
+      </button>
+      <button class="toggle-btn" id="btn-semi" onclick="setPeriod('semi')">
+        <span data-fr>Semestriel</span><span data-ar>نصف سنوي</span>
+      </button>
+      <button class="toggle-btn" id="btn-annual" onclick="setPeriod('annual')">
+        <span data-fr>Annuel</span><span data-ar>سنوي</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="pricing-grid reveal">
+
+    <!-- Card 1: Hifz + Tajwid -->
+    <div class="price-card featured">
+      <div class="featured-badge"><span data-fr>Le plus populaire</span><span data-ar>الأكثر طلباً</span></div>
+      <span class="price-icon">حفظ</span>
+      <span class="price-type-badge badge-ind">
+        <span>⬤</span>
+        <span data-fr>Cours individuels</span><span data-ar>حصص انفرادية</span>
+      </span>
+      <div class="price-name"><span data-fr>Hifz &amp; Tajwîd</span><span data-ar>تحفيظ القرآن مع التجويد</span></div>
+      <span class="price-name-ar">تحفيظ القرآن الكريم مع التجويد</span>
+      <div class="price-meta">
+        <div class="price-meta-item"><div class="price-meta-dot"></div><span data-fr>2 séances / semaine</span><span data-ar>مرتان في الأسبوع</span></div>
+        <div class="price-meta-item"><div class="price-meta-dot"></div><span data-fr>45 min / séance</span><span data-ar>45 دقيقة للحصة</span></div>
+      </div>
+      <!-- Non-Arabic speakers -->
+      <div class="price-amount">
+        <div class="price-main" id="hifz-price-main">350</div>
+        <div class="price-period" id="hifz-period-label"><span data-fr>/ mois · Non-arabophones</span><span data-ar>/ شهر · غير الناطقين بالعربية</span></div>
+        <div class="price-saving" id="hifz-saving" style="display:none"></div>
+      </div>
+      <!-- Arabic speakers -->
+      <div class="price-alt">
+        <span data-fr>Arabophones : </span><span data-ar>الناطقون بالعربية : </span>
+        <strong id="hifz-price-alt" style="color:var(--gold-light)">150</strong>
+        <span id="hifz-currency-alt" style="font-size:12px;color:var(--gold-light)"> MAD</span>
+        <span style="font-size:11px;color:rgba(255,255,255,0.25)"> / <span data-fr>mois</span><span data-ar>شهر</span></span>
+      </div>
+      <p class="price-note" style="margin-top:10px"><span data-fr>Tarif réduit pour les locuteurs natifs arabes.</span><span data-ar>سعر مخفض للناطقين الأصليين باللغة العربية.</span></p>
+    </div>
+
+    <!-- Card 2: Langue Arabe -->
+    <div class="price-card">
+      <span class="price-icon">عربي</span>
+      <span class="price-type-badge badge-ind">
+        <span>⬤</span>
+        <span data-fr>Cours individuels</span><span data-ar>حصص فردية</span>
+      </span>
+      <div class="price-name"><span data-fr>Langue Arabe</span><span data-ar>اللغة العربية</span></div>
+      <span class="price-name-ar">تعليم اللغة العربية الفصحى</span>
+      <div class="price-meta">
+        <div class="price-meta-item"><div class="price-meta-dot"></div><span data-fr>3 séances / semaine</span><span data-ar>ثلاث مرات في الأسبوع</span></div>
+        <div class="price-meta-item"><div class="price-meta-dot"></div><span data-fr>30 min / séance</span><span data-ar>30 دقيقة للحصة</span></div>
+      </div>
+      <div class="price-amount">
+        <div class="price-main" id="arabic-price-main">400</div>
+        <div class="price-period" id="arabic-period-label"><span data-fr>/ mois</span><span data-ar>/ شهر</span></div>
+        <div class="price-saving" id="arabic-saving" style="display:none"></div>
+      </div>
+    </div>
+
+    <!-- Card 3: Sciences Islamiques -->
+    <div class="price-card">
+      <span class="price-icon">علوم</span>
+      <span class="price-type-badge badge-grp">
+        <span>⬡</span>
+        <span data-fr>Cours collectifs</span><span data-ar>حصص جماعية</span>
+      </span>
+      <div class="price-name"><span data-fr>Sciences Islamiques</span><span data-ar>العلوم الشرعية</span></div>
+      <span class="price-name-ar">العلوم الشرعية</span>
+      <div class="price-meta">
+        <div class="price-meta-item"><div class="price-meta-dot"></div><span data-fr>2 séances / semaine</span><span data-ar>مرتان في الأسبوع</span></div>
+        <div class="price-meta-item"><div class="price-meta-dot"></div><span data-fr>40 min / séance</span><span data-ar>40 دقيقة للحصة</span></div>
+      </div>
+      <div class="price-amount">
+        <div class="price-main" id="sci-price-main">200</div>
+        <div class="price-period" id="sci-period-label"><span data-fr>/ mois</span><span data-ar>/ شهر</span></div>
+        <div class="price-saving" id="sci-saving" style="display:none"></div>
+      </div>
+      <p class="price-note"><span data-fr>Spécialités : Nahw, Fiqh, Hadith, Aqida</span><span data-ar>التخصصات : النحو، الفقه، الحديث، العقيدة</span></p>
+    </div>
+
+    <!-- Card 4: Adab & Akhlaq -->
+    <div class="price-card">
+      <span class="price-icon">أخلاق</span>
+      <span class="price-type-badge badge-grp">
+        <span>⬡</span>
+        <span data-fr>Cours collectifs</span><span data-ar>حصص جماعية</span>
+      </span>
+      <div class="price-name"><span data-fr>Éthique Islamique</span><span data-ar>الآداب والأخلاق</span></div>
+      <span class="price-name-ar">الآداب والأخلاق الإسلامية</span>
+      <div class="price-meta">
+        <div class="price-meta-item"><div class="price-meta-dot"></div><span data-fr>2 séances / semaine</span><span data-ar>مرتان في الأسبوع</span></div>
+        <div class="price-meta-item"><div class="price-meta-dot"></div><span data-fr>30 min / séance</span><span data-ar>30 دقيقة للحصة</span></div>
+      </div>
+      <div class="price-amount">
+        <div class="price-main" id="adab-price-main">200</div>
+        <div class="price-period" id="adab-period-label"><span data-fr>/ mois</span><span data-ar>/ شهر</span></div>
+        <div class="price-saving" id="adab-saving" style="display:none"></div>
+      </div>
+      <p class="price-note"><span data-fr>Éthique islamique, Adhkar, Sira du Prophète ﷺ</span><span data-ar>الأخلاق الإسلامية، الأذكار، السيرة النبوية الشريفة</span></p>
+    </div>
+
+  </div>
+
+  <div class="pricing-disclaimer">
+    <p>
+      <strong>⚠</strong>
+      <span data-fr> Tout apprenant s'inscrivant à <strong>2 abonnements ou plus</strong> bénéficie d'une réduction sur les frais de scolarité. Contactez-nous pour en savoir plus.</span>
+      <span data-ar> يستفيد المتعلم من <strong>تخفيض في الرسوم الدراسية</strong> عند الاشتراك في باقتين أو أكثر. تواصلوا معنا لمزيد من المعلومات.</span>
+    </p>
+  </div>
+</section>
+
 <!-- METHOD -->
 <section class="method-section" id="method">
   <span class="section-label" style="color:rgba(184,151,42,0.5)">
@@ -476,7 +663,7 @@ html[lang="ar"] .footer-links a{font-family:'Noto Naskh Arabic',serif;letter-spa
       <h3><span data-fr>Nous sommes<br>à votre écoute</span><span data-ar>نحن هنا<br>لخدمتكم</span></h3>
       <p><span data-fr>Les inscriptions sont ouvertes toute l'année pour les cours en présentiel et en ligne. Contactez-nous pour toute information.</span><span data-ar>التسجيل مفتوح طوال العام للدراسة حضورياً وعبر الإنترنت. تواصلوا معنا لأي استفسار.</span></p>
       <ul class="contact-list">
-        <li><div class="ci">✉</div><span>contact@boudour-quran.com</span></li>
+        <li><div class="ci">✉</div><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="294a46475d484a5d694b465c4d465c5b04585c5b4847074a4644">[email&#160;protected]</a></span></li>
         <li><div class="ci">☎</div><span>+212 6 XX XX XX XX</span></li>
         <li><div class="ci">⌂</div><span><span data-fr>Marrakech, Maroc</span><span data-ar>مراكش، المغرب</span></span></li>
         <li><div class="ci">◷</div><span><span data-fr>Lun–Sam : 8h00 – 18h00</span><span data-ar>الاثنين–السبت: 8:00 – 18:00</span></span></li>
@@ -535,6 +722,7 @@ html[lang="ar"] .footer-links a{font-family:'Noto Naskh Arabic',serif;letter-spa
       <a href="#about"><span data-fr>À propos</span><span data-ar>من نحن</span></a>
       <a href="#programs"><span data-fr>Programmes</span><span data-ar>البرامج</span></a>
       <a href="#method"><span data-fr>Méthode</span><span data-ar>المنهجية</span></a>
+      <a href="#pricing"><span data-fr>Tarifs</span><span data-ar>الأسعار</span></a>
       <a href="#testimonials"><span data-fr>Témoignages</span><span data-ar>الشهادات</span></a>
       <a href="#inscription"><span data-fr>Contact</span><span data-ar>التسجيل</span></a>
     </div>
@@ -546,7 +734,100 @@ html[lang="ar"] .footer-links a{font-family:'Noto Naskh Arabic',serif;letter-spa
   <div class="footer-bottom latin">© 2025 Plateforme Boudour — منصة بذور لتعليم القرآن الكريم</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+// ===== PRICING LOGIC =====
+const PRICES = {
+  hifz:   { monthly:[350,150], semi:[1750,750], annual:[3500,1500] },
+  arabic: { monthly:[400],     semi:[2000],     annual:[4000] },
+  sci:    { monthly:[200],     semi:[1000],     annual:[2000] },
+  adab:   { monthly:[200],     semi:[1000],     annual:[2000] }
+};
+const EUR_RATE = 10.80;
+let currentCurrency = 'MAD';
+let currentPeriod = 'monthly';
+
+const periodLabels = {
+  fr: { monthly:'/ mois', semi:'/ 6 mois', annual:'/ an' },
+  ar: { monthly:'/ شهر', semi:'/ 6 أشهر', annual:'/ سنة' }
+};
+const savingLabels = {
+  fr: { semi:'6 mois au prix de 5 ✓', annual:'12 mois au prix de 10 ✓' },
+  ar: { semi:'6 أشهر بسعر 5 ✓', annual:'12 شهراً بسعر 10 ✓' }
+};
+
+function fmt(val, currency) {
+  if (currency === 'EUR') {
+    return (val / EUR_RATE).toFixed(1);
+  }
+  return Math.round(val);
+}
+
+function updatePrices() {
+  const lang = document.getElementById('html-root').lang || 'fr';
+  const cur = currentCurrency;
+  const per = currentPeriod;
+  const sym = cur === 'MAD' ? ' MAD' : ' €';
+  const pLabel = periodLabels[lang][per];
+  const showSaving = per !== 'monthly';
+  const sLabel = showSaving ? savingLabels[lang][per] : '';
+
+  // Hifz (2 prices: non-arabic / arabic)
+  const hMain = fmt(PRICES.hifz[per][0], cur);
+  const hAlt  = fmt(PRICES.hifz[per][1], cur);
+  document.getElementById('hifz-price-main').textContent = hMain + sym;
+  document.getElementById('hifz-price-alt').textContent = hAlt;
+  document.getElementById('hifz-currency-alt').textContent = sym;
+  const hSave = document.getElementById('hifz-saving');
+  hSave.style.display = showSaving ? 'inline-block' : 'none';
+  hSave.textContent = sLabel;
+
+  // Arabic
+  document.getElementById('arabic-price-main').textContent = fmt(PRICES.arabic[per][0], cur) + sym;
+  const aSave = document.getElementById('arabic-saving');
+  aSave.style.display = showSaving ? 'inline-block' : 'none';
+  aSave.textContent = sLabel;
+
+  // Sciences
+  document.getElementById('sci-price-main').textContent = fmt(PRICES.sci[per][0], cur) + sym;
+  const sSave = document.getElementById('sci-saving');
+  sSave.style.display = showSaving ? 'inline-block' : 'none';
+  sSave.textContent = sLabel;
+
+  // Adab
+  document.getElementById('adab-price-main').textContent = fmt(PRICES.adab[per][0], cur) + sym;
+  const dSave = document.getElementById('adab-saving');
+  dSave.style.display = showSaving ? 'inline-block' : 'none';
+  dSave.textContent = sLabel;
+
+  // Period labels
+  ['hifz','arabic','sci','adab'].forEach(id => {
+    const el = document.getElementById(id+'-period-label');
+    if(el) el.querySelector('[data-fr]') && (el.querySelector('[data-fr]').textContent = (id==='hifz'? pLabel+' · Non-arabophones' : pLabel));
+    if(el) el.querySelector('[data-ar]') && (el.querySelector('[data-ar]').textContent = (id==='hifz'? pLabel+' · غير الناطقين بالعربية' : pLabel));
+  });
+}
+
+function setCurrency(c) {
+  currentCurrency = c;
+  document.getElementById('btn-mad').classList.toggle('active', c==='MAD');
+  document.getElementById('btn-eur').classList.toggle('active', c==='EUR');
+  updatePrices();
+}
+
+function setPeriod(p) {
+  currentPeriod = p;
+  ['monthly','semi','annual'].forEach(k => {
+    document.getElementById('btn-'+k).classList.toggle('active', k===p);
+  });
+  updatePrices();
+}
+// call on lang change
+const origSetLang = window.setLang;
+window.setLang = function(lang) { origSetLang(lang); updatePrices(); };
+// init
+updatePrices();
+
+</script><script>
 function setLang(lang) {
   const html = document.getElementById('html-root');
   const body = document.body;
@@ -590,15 +871,4 @@ document.getElementById('fsubmit').addEventListener('click', function() {
     this.style.background = '#8B2020';
     setTimeout(() => {
       this.style.background = '';
-      this.querySelector('[data-fr]').textContent = 'Envoyer ma demande';
-      this.querySelector('[data-ar]').textContent = 'إرسال طلبي';
-    }, 2500);
-  }
-});
-
-// Init from saved
-const saved = localStorage.getItem('boudour-lang') || 'fr';
-setLang(saved);
-</script>
-</body>
-</html>
+      this.querySelector('[data-fr]').textContent = 'Env
